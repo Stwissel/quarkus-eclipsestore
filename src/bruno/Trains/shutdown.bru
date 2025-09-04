@@ -1,0 +1,19 @@
+meta {
+  name: shutdown
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{SERVER}}/hello/shutdown
+  body: none
+  auth: inherit
+}
+
+assert {
+  res.status: eq 200
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,19 @@
+meta {
+  name: hello
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{SERVER}}/hello
+  body: none
+  auth: inherit
+}
+
+assert {
+  res.status: eq 200
+}
+
+settings {
+  encodeUrl: true
+}

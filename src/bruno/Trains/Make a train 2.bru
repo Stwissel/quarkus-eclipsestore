@@ -1,0 +1,27 @@
+meta {
+  name: Make a train 2
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{SERVER}}/hello/trains
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name" : "Oscar",
+    "color" : "BLUE",
+    "numberIfCars" : 3
+  }
+}
+
+assert {
+  res.status: eq 200
+}
+
+settings {
+  encodeUrl: true
+}

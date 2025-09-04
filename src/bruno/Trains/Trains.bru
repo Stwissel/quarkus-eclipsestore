@@ -1,0 +1,19 @@
+meta {
+  name: Trains
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{SERVER}}/hello/trains
+  body: none
+  auth: inherit
+}
+
+assert {
+  res.status: eq 200
+}
+
+settings {
+  encodeUrl: true
+}
