@@ -31,7 +31,7 @@ public class TrainStorage {
 
   public void addTrain(Train train) {
     this.depot.addTrain(train);
-    System.out.println("Added train: " + train.getName());
+    System.out.println("Added train: " + train.name());
     this.storageManager.store(this.depot.trains);
   }
 

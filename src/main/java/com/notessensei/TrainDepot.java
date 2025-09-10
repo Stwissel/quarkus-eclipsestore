@@ -13,7 +13,7 @@ public class TrainDepot {
   }
 
   public Optional<Train> getTrainByName(String name) {
-    return trains.stream().filter(train -> train.getName().equals(name)).findFirst();
+    return trains.stream().filter(train -> train.name().equals(name)).findFirst();
   }
 
 }
