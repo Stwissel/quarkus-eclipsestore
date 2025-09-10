@@ -25,7 +25,7 @@ public class TrainResource {
     @Path("/trains")
     @Produces(MediaType.APPLICATION_JSON)
     public List<Train> getTrains() {
-        return trainStorage.depot.getTrainList();
+        return trainStorage.depot.trains;
     }
 
     @POST
